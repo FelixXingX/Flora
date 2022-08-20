@@ -1,0 +1,10 @@
+Tomato:Fruit:1
+Cucumber:Fruit:7
+Rose:Flower:3
+Cactus:Plant:14
+Tulip:Flower:7
+Avocado:Fruit:3
+Lily:Flower:2
+Jade Plant:Plant:14
+Snake Plant:Plant:14
+Ivy:Plant:7
