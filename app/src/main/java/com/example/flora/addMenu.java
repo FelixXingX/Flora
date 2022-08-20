@@ -24,14 +24,14 @@ public class addMenu extends AppCompatActivity {
         manualButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(addMenu.this, database.class));
+                startActivity(new Intent(addMenu.this, manual.class));
             }
         });
 
         databaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(addMenu.this, manual.class));
+                startActivity(new Intent(addMenu.this, database.class));
             }
         });
     }

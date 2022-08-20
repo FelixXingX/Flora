@@ -1,3 +1,86 @@
 <resources>
     <string name="app_name">Flora</string>
+
+    <string-array name="plant_names_txt">
+        <item>Tomato</item>
+        <item>Cucumber</item>
+        <item>Rose</item>
+        <item>Cactus</item>
+        <item>Tulip</item>
+        <item>Avocado</item>
+        <item>Lily</item>
+        <item>Flower</item>
+        <item>Jade Plant</item>
+        <item>Snake Plant</item>
+        <item>Ivy</item>
+        <item>Orchid</item>
+        <item>Daisy</item>
+        <item>Lilac</item>
+        <item>Sunflower</item>
+        <item>Hydragea</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="plant_type_txt">
+        <item>Tomato</item>
+        <item>Cucumber</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>
