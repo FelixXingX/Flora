@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.myViewHolder> {
     private ArrayList<Plant> plantDatabase;
-    public databaseAdapter(ArrayList<Plant> )
+    //public databaseAdapter(ArrayList<Plant> )
     @NonNull
     @Override
     public databaseAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
