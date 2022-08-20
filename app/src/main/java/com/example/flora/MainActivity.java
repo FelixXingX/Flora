@@ -1,4 +1,4 @@
-package com.example.flora2;
+package com.example.flora;
 
 import android.content.Intent;
 import android.os.Bundle;
