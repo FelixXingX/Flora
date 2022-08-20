@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".addMenu" />
+        <activity android:name=".database"/>
+        <activity android:name=".manual"/>
     </application>
 
 </manifest>
