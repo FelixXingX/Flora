@@ -15,7 +15,7 @@ public class weather {
 
     public static void main(String[] args) {
         String city = "Toronto";
-        
+
         BufferedReader reader;
         String line;
         StringBuffer responseContent = new StringBuffer();
