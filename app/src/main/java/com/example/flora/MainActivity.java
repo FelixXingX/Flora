@@ -12,11 +12,15 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     Button addButton;
+    ImageView view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        view = findViewById(R.id.backgroundMain);
+        view.setImageResource(R.drawable.background);
 
         ImageView myImageView = (ImageView) findViewById(R.id.plantLogo);
         myImageView.setImageResource(R.drawable.plantlogo);

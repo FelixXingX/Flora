@@ -5,12 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/backgroundManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <EditText
         android:id="@+id/plantName"
         android:layout_width="196dp"
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Enter Plant Name"
+        android:textColorHint="@color/black"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,6 +37,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Enter Plant Type"
+        android:textColorHint="@color/black"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,6 +52,7 @@
         android:layout_width="240dp"
         android:layout_height="48dp"
         android:ems="10"
+        android:textColorHint="@color/black"
         android:hint="Water Cycle in Days (1 - 30)"
         android:inputType="number"
         android:textAlignment="center"
@@ -62,16 +75,21 @@
         app:layout_constraintTop_toBottomOf="@+id/waterLevel" />
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="8"
+        android:shadowRadius="0.5"
         android:id="@+id/Instruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Plant Details  Below"
+        android:text="Enter Plant Details Below"
         android:textAlignment="center"
         android:textColor="#4CAF50"
-        android:textSize="34sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/plantName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

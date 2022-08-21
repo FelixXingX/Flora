@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/backgroundMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
@@ -44,14 +54,19 @@
 
     <TextView
         android:id="@+id/Title"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="20"
+        android:shadowRadius="0.5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Flora"
         android:textColor="#4CAF50"
-        android:textSize="48sp"
+        android:textSize="96sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/myPlants"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plantLogo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
