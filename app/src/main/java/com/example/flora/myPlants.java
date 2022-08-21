@@ -1,5 +1,6 @@
 package com.example.flora;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -12,7 +13,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import android.view.View;
+import android.widget.Button;
+
 public class myPlants extends AppCompatActivity {
+
+    Button backMainMenuButton;
 
     private ArrayList<Plant> savedPlantObjects = new ArrayList<Plant>(); // users personal plants
     private static final String TAG = "MainActivity";
@@ -28,7 +34,6 @@ public class myPlants extends AppCompatActivity {
             savedPlantObjects.add(new Plant (name,type,water));
         }
 
-
         if (savedPlantObjects.size() > 1) {
             Collections.sort(savedPlantObjects, new Comparator<Plant>(){
                 public int compare (Plant o1, Plant o2) {
@@ -43,5 +48,14 @@ public class myPlants extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+
+        backMainMenuButton = findViewById(R.id.backMainMenu2);
+
+        backMainMenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(myPlants.this, MainActivity.class));
+            }
+        });
     }
 }
