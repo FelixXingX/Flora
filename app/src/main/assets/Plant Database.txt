@@ -8,3 +8,32 @@ Lily:Flower:2
 Jade Plant:Plant:14
 Snake Plant:Plant:14
 Ivy:Plant:7
+Orchid:Flower:7
+Daisy:Flower:7
+Lilac:Flower:10
+Sunflower:Flower:7
+Hydrangea:Flower:7
+Pansy:Flower:7
+Daffodil:Flower:7
+Marigold:Flower:7
+Chrysanthemum:Flower:1
+Violet:Flower:7
+Petunia:Flower:4
+Cherry Tree:Fruit:8
+Apple Tree:Fruit:7
+Apricot Tree:Fruit:10
+Blueberry Bush:Fruit:7
+Orange Tree:Fruit:7
+Peach Tree:Fruit:3
+Strawberry Bush:Fruit:1
+Carrot:Vegetable:7
+Cabbage:Vegetable:7
+Onion:Vegetable:7
+Pumpkin:Fruit:7
+Potato:Vegetable:7
+Allium:Flower:7
+Lavender:Flower:14
+Stonecrop:Flower:10
+Daylily:Flower:7
+Hibiscus:Flower:2
+Coneflower:Flower:5
