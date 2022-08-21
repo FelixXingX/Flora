@@ -25,6 +25,7 @@
         <activity android:name=".addMenu" />
         <activity android:name=".database"/>
         <activity android:name=".manual"/>
+        <activity android:name=".myPlants"></activity>
     </application>
 
 </manifest>

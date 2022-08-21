@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     Button addButton;
+    Button myPlantsButtons;
     ImageView view;
 
     @Override
@@ -32,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, addMenu.class));
+            }
+        });
+
+        myPlantsButtons = findViewById(R.id.myPlants);
+
+        myPlantsButtons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, myPlants.class));
             }
         });
 
