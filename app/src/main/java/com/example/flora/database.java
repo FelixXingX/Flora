@@ -63,14 +63,17 @@ public class database extends AppCompatActivity implements databasePlantInterfac
         String str;
         int num = plantDatabase.get(position).getDaysPerWater();
         if (num != 1){
-            str = plantDatabase.get(position).getPlantName() + "'s\n needs to be watered \n every " + num + " days.";
+            str = plantDatabase.get(position).getPlantName() + "'s\n need to be watered \n every " + num + " days.";
         } else {
-            str = plantDatabase.get(position).getPlantName() + "'s\n needs to be watered \n everyday.";
+            str = plantDatabase.get(position).getPlantName() + "'s\n need to be watered \n everyday.";
         }
-
+        String pos = String.valueOf(position);
+        String number = String.valueOf(num);
         intent.putExtra("Plant Name", plantDatabase.get(position).getPlantName());
         intent.putExtra("Plant Type", plantDatabase.get(position).getPlantType());
         intent.putExtra("Plant Water", str);
+        intent.putExtra("Until Water", number);
+        intent.putExtra("Position", position);
 
         startActivity(intent);
     }

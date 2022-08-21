@@ -10,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.nio.charset.StandardCharsets;
+import java.io.File;
 
 public class manual extends AppCompatActivity {
 
@@ -43,8 +49,24 @@ public class manual extends AppCompatActivity {
                 name = plantName.getText().toString();
                 type = plantType.getText().toString();
                 water = Integer.valueOf(waterLevel.getText().toString());
+
+                String newPlant = name + ":" + type + ":" + water;
+                writeToFile("manualPlant.txt",newPlant);
+
                 startActivity(new Intent(manual.this, addMenu.class));
             }
         });
+    }
+
+    public void writeToFile(String fileName, String content){
+        File path = getApplicationContext().getFilesDir();
+        try{
+            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
+            writer.write(content.getBytes());
+            writer.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

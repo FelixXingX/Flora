@@ -3,23 +3,34 @@ package com.example.flora;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< Updated upstream
+=======
+import android.widget.ImageView;
 import android.widget.TextView;
+>>>>>>> Stashed changes
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class databaseClicked extends AppCompatActivity {
 
     Button addMyPlant;
+<<<<<<< Updated upstream
+    private static final String TAG = "MainActivity";
+=======
+    ImageView view;
+>>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_clicked);
-
         String name = getIntent().getStringExtra("Plant Name");
         String type = getIntent().getStringExtra("Plant Type");
         String water = getIntent().getStringExtra("Plant Water");
+
+        String untilWater = getIntent().getStringExtra("Until Water");
 
         TextView nameTextView = findViewById(R.id.pName);
         TextView typeTextView = findViewById(R.id.pType);
@@ -29,12 +40,19 @@ public class databaseClicked extends AppCompatActivity {
         typeTextView.setText(type);
         waterTextView.setText(water);
 
+        view = findViewById(R.id.backgroundDatabaseClicked);
+        view.setImageResource(R.drawable.background);
+
         addMyPlant = findViewById(R.id.addMyPlants);
 
         addMyPlant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(databaseClicked.this, myPlants.class));
+                Intent intent = new Intent(databaseClicked.this, myPlants.class);
+                intent.putExtra("Plant Name", name);
+                intent.putExtra("Plant Type", type);
+                intent.putExtra("Plant Water", untilWater);
+                startActivity(intent);
             }
         });
     }
