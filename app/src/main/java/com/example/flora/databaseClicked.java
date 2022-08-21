@@ -3,11 +3,8 @@ package com.example.flora;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< Updated upstream
-=======
 import android.widget.ImageView;
 import android.widget.TextView;
->>>>>>> Stashed changes
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class databaseClicked extends AppCompatActivity {
 
     Button addMyPlant;
-<<<<<<< Updated upstream
+
     private static final String TAG = "MainActivity";
-=======
+
     ImageView view;
->>>>>>> Stashed changes
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
