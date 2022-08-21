@@ -3,7 +3,7 @@
 
 ## ⭐Introduction⭐:
 
-Flora is a fullstack mobile application using Java and Andriod Studio to track your plants every need
+Flora is a fullstack mobile application using Java and Andriod Studio to track your plants' every need
 
 ## ⚙️Functions / Features⚙️:
 - Pick a plant from our database of plants or input your own custom plant!
