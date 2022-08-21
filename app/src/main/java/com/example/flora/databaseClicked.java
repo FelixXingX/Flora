@@ -1,11 +1,16 @@
 package com.example.flora;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class databaseClicked extends AppCompatActivity {
+
+    Button addMyPlant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +28,14 @@ public class databaseClicked extends AppCompatActivity {
         nameTextView.setText(name);
         typeTextView.setText(type);
         waterTextView.setText(water);
+
+        addMyPlant = findViewById(R.id.addMyPlants);
+
+        addMyPlant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(databaseClicked.this, myPlants.class));
+            }
+        });
     }
 }
