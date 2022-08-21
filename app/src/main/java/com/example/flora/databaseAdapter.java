@@ -1,5 +1,6 @@
 package com.example.flora;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,28 +13,21 @@ import java.util.ArrayList;
 
 public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.MyViewHolder> {
     private static final String TAG = "MainActivity";
+    Context context;
     private ArrayList<Plant> plantDatabase;
-    public databaseAdapter(ArrayList<Plant> plantDatabase) {
+
+    public databaseAdapter(Context context, ArrayList<Plant> plantDatabase) {
+        this.context = context;
         this.plantDatabase = plantDatabase;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView plantNameTxt;
-        private TextView plantTypeTxt;
-
-        public MyViewHolder (@NonNull View view) {
-            super(view);
-            plantNameTxt = view.findViewById(R.id.plantNameTxt);
-            plantTypeTxt = view.findViewById(R.id.plantTypeTxt);
-        }
-
-    }
 
     @NonNull
     @Override
     public databaseAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.database_list_items,parent,false);
-        return new MyViewHolder(itemView);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.database_list_items, parent, false);
+        return new databaseAdapter.MyViewHolder(view);
     }
 
     @Override
@@ -49,4 +43,14 @@ public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.MyView
         return plantDatabase.size();
     }
 
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView plantNameTxt;
+        private TextView plantTypeTxt;
+
+        public MyViewHolder (@NonNull View itemView) {
+            super(itemView);
+            plantNameTxt = itemView.findViewById(R.id.plantNameTxt);
+            plantTypeTxt = itemView.findViewById(R.id.plantTypeTxt);
+        }
+    }
 }

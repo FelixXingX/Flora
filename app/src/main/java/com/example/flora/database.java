@@ -15,18 +15,27 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class database extends AppCompatActivity {
-    private RecyclerView recyclerView;
     private ArrayList<Plant> plantDatabase = new ArrayList<Plant>(); // reads from the database and stores it in an array
     private ArrayList<String> lines = new ArrayList<>();  // Data from Database
     private static final String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database);
 
-        recyclerView = findViewById(R.id.databaseRecyclerView);
+        RecyclerView recyclerView = findViewById(R.id.databaseRecyclerView);
+        setupPlantModels();
+        databaseAdapter adapter = new databaseAdapter(this, plantDatabase);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+    }
 
+
+    private void setupPlantModels(){
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("Plant Database.txt")));
             while (br.ready()) {
@@ -45,14 +54,5 @@ public class database extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             Log.d(TAG, plantDatabase.get(i).getPlantName());
         }
-        setAdapter();
-    }
-
-    private void setAdapter(){
-        databaseAdapter adapter = new databaseAdapter(plantDatabase);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
     }
 }
