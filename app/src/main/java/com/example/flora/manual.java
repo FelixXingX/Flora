@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class manual extends AppCompatActivity {
 
@@ -21,6 +22,8 @@ public class manual extends AppCompatActivity {
 
     Button submitButton;
 
+    ImageView view;
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manual);
@@ -30,6 +33,9 @@ public class manual extends AppCompatActivity {
         waterLevel = (EditText) findViewById(R.id.waterLevel);
 
         submitButton = findViewById(R.id.Submit);
+
+        view = findViewById(R.id.backgroundManual);
+        view.setImageResource(R.drawable.background);
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
