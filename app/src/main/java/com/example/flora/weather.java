@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import org.json.JSONArray;
@@ -16,15 +15,13 @@ public class weather {
 
     public static void main(String[] args) {
         String city = "Toronto";
+
         BufferedReader reader;
         String line;
         StringBuffer responseContent = new StringBuffer();
-
         try {
-
             URL url = new URL("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=542ffd081e67f4512b705f89d2a611b2&units=metric");
             connection = (HttpURLConnection) url.openConnection();
-
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
             connection.setReadTimeout(5000);
