@@ -13,12 +13,14 @@ import java.util.ArrayList;
 
 public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.MyViewHolder> {
     private static final String TAG = "MainActivity";
+    private final databasePlantInterface databaseInterface;
     Context context;
     private ArrayList<Plant> plantDatabase;
 
-    public databaseAdapter(Context context, ArrayList<Plant> plantDatabase) {
+    public databaseAdapter(Context context, ArrayList<Plant> plantDatabase, databasePlantInterface databaseInterface) {
         this.context = context;
         this.plantDatabase = plantDatabase;
+        this.databaseInterface = databaseInterface;
     }
 
 
@@ -27,7 +29,7 @@ public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.MyView
     public databaseAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.database_list_items, parent, false);
-        return new databaseAdapter.MyViewHolder(view);
+        return new databaseAdapter.MyViewHolder(view, databaseInterface);
     }
 
     @Override
@@ -47,10 +49,23 @@ public class databaseAdapter extends RecyclerView.Adapter<databaseAdapter.MyView
         private TextView plantNameTxt;
         private TextView plantTypeTxt;
 
-        public MyViewHolder (@NonNull View itemView) {
+        public MyViewHolder (@NonNull View itemView, databasePlantInterface databaseInterface) {
             super(itemView);
             plantNameTxt = itemView.findViewById(R.id.plantNameTxt);
             plantTypeTxt = itemView.findViewById(R.id.plantTypeTxt);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (databaseInterface != null) {
+                        int pos = getAbsoluteAdapterPosition();
+
+                        if (pos != RecyclerView.NO_POSITION){
+                            databaseInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }
