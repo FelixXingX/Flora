@@ -1,6 +1,10 @@
 package com.example.flora;
 
+import java.util.ArrayList;
+
 public class Plant {
+
+    private ArrayList<Plant> savedPlantObjects = new ArrayList<Plant>(); // users personal plants
 
     // Instance Variables
     private int daysPerWater;  // A constant variable that doesnt change, daysUntilWater will reset to this number
@@ -16,10 +20,6 @@ public class Plant {
         this.daysPerWater = Integer.parseInt(daysPerWater);
         this.daysUntilWater = this.daysPerWater;
         this.plantAge = 0;
-    }
-
-    public Plant (String plantType){
-        this.plantType = plantType;
     }
 
     // Add plant age
