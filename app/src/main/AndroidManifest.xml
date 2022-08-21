@@ -26,6 +26,7 @@
         <activity android:name=".database"/>
         <activity android:name=".manual"/>
         <activity android:name=".myPlants"></activity>
+        <activity android:name=".databaseClicked"></activity>
     </application>
 
 </manifest>
